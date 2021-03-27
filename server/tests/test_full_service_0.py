@@ -1,8 +1,8 @@
-from unittest import mock
+# from unittest import mock
 from django.test import TestCase
 from freezegun import freeze_time
 from rest_framework.utils import json
-from delivery.views import *
+# from delivery.views import *
 
 
 # Integration test
