@@ -1,0 +1,18 @@
+--- 
+-   name: Log into private registry
+    hosts: server
+    remote_user: entrant
+    become: yes
+    vars_promt:
+        -   name: registry
+            prompt: "Registery"
+            private: no
+        -   name: username
+            prompt: "Username"
+            private: no
+        -   name: password
+            prompt: "Password"
+            private: no
+    tasks: 
+        -   name: Log into registry
+            shell: "docker login -u {{ username }} -p {{ password }} {{registry}}"
